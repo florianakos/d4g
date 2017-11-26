@@ -180,7 +180,7 @@ func main() {
 
 		// Define URL handler functions
 		http.HandleFunc("/", mainPageHandler)
-    http.HandleFunc("/search", searchHandler)
+		http.HandleFunc("/search", searchHandler)
 		http.HandleFunc("/dentist", dentistHandler)
 		fs := http.FileServer(http.Dir("./html/static"))
 		http.Handle("/static/", http.StripPrefix("/static", fs))

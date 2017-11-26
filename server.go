@@ -13,7 +13,7 @@ import (
 )
 
 
-// struct to hold data retrieved from SQL queries...	
+// struct to hold data retrieved from SQL queries...
 type Doctor struct {
 	Id template.HTML
 	Firstname string
@@ -175,21 +175,21 @@ func main() {
 		db, err = sql.Open("sqlite3", "./database/enigma.db")
 		check(err)
 		// Parse HTML templates that will be populated dynamically
-    searchTemplate = template.Must(template.ParseFiles("./html/search.html"))
+		searchTemplate = template.Must(template.ParseFiles("./html/search.html"))
 		dentistTemplate = template.Must(template.ParseFiles("./html/dentist.html"))
 
 		// Define URL handler functions
-    http.HandleFunc("/", mainPageHandler)
+		http.HandleFunc("/", mainPageHandler)
     http.HandleFunc("/search", searchHandler)
-    http.HandleFunc("/dentist", dentistHandler)
-    fs := http.FileServer(http.Dir("./html/static"))
-    http.Handle("/static/", http.StripPrefix("/static", fs))
+		http.HandleFunc("/dentist", dentistHandler)
+		fs := http.FileServer(http.Dir("./html/static"))
+		http.Handle("/static/", http.StripPrefix("/static", fs))
 
 		// Start  server
 		fmt.Println("Server is running...")
-    err = http.ListenAndServe(":8080", nil)
-    if err != nil {
-        log.Fatal("ListenAndServe: ", err)
-    }
-    db.Close()
+		err = http.ListenAndServe(":8080", nil)
+		if err != nil {
+			log.Fatal("ListenAndServe: ", err)
+		}
+		db.Close()
 }

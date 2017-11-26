@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="RocketCake">
+    <title>Find the Best Dentist</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
+</head>
+
+<body>
+    <div style="width: 400px; margin: 0 auto;" class="textstyle1">
+					<img onclick="window.history.back();"  src="/static/logo.png" id="img_26be2b" alt="" title="" />
+        <span class="textstyle2"><br><br/> </span>
+    </div>
+<div id="main_content" >
+    <div id="innercontainer">
+			<table id="container" class="blueTable" style="width:90%">
+				<thead>
+					<tr>
+						<th>Firstname</th>
+						<th>Lastname</th>
+						<th>Email Address</th>
+						<th>Telephone Number</th>
+						<th>Opening Hours</th>
+						<th>Specialty</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{range .}}
+								<tr>
+									
+									<td style="padding:5px;">{{.Firstname}}</td>
+									<td style="padding:5px;">{{.Lastname}}</td>
+									<td style="padding:5px;">{{.Email}}</td>
+									<td style="padding:5px;">{{.Phone}}</td>
+									<td style="padding:5px;">{{.Openings}}</td>
+									<td style="padding:5px;">{{.Specialty}}</td>
+								</tr>
+					{{end}}
+				</tbody>
+			</table>
+    </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="RocketCake">
+    <title>Dentist Personal Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
+</head>
+
+<body>
+    <div style="width: 400px; margin: 0 auto;" class="textstyle1">
+					<img onclick="window.history.back();"  src="/static/logo.png" id="img_26be2b" alt="" title="" />
+          <span class="textstyle2"><br><br/> </span>
+    </div>
+
+    <div id="dentist_main_content" >
+        <div id="innercontainer">
+          <div id="dentistinnercontainer">
+									<p style="padding:5px;"></p>
+									<p style="padding:5px;">Hello!  {{.Image}}</p>
+                  <p style="padding:5px;">My name is: <b>{{.Firstname}} {{.Lastname}}</b> and I am a practicing dentist.</p>
+                  <p style="padding:5px;">I can be currently found at {{.Address}} in {{.City}}.</p>
+									<p style="padding:5px;">You can contact me by phone ({{.Phone}}) or via email: {{.Email}}</p>
+									<p style="padding:5px;"><u>My opening hours are:</u></p>
+                  <p style="padding:5px;">{{.Openings}}</p>
+                  <p style="padding:5px;">Specialty: {{.Specialty}} </p>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
